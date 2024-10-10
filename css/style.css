@@ -1,0 +1,27 @@
+body{
+    font-size: 1em;
+}
+
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+.active {
+    color: red;
+    background-color: bisque;
+}
+
+img{
+    width: 100%;
+}
