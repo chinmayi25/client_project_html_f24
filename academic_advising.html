@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Food Pantry</title>
+</head>
+
+<body>
+    <a id="skip" href="#main">Skip to Main Content</a>
+    <header>
+        <nav class="navbar">
+            <a href="#"><img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"
+                    class="umsi-logo"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="food_pantry.html" class="nav-link">Food Pantry</a>
+                </li>
+                <li class="nav-item">
+                    <a href="academic_advising.html" class="nav-link active-state">Academic Advising</a>
+                </li>
+                <li class="nav-item">
+                    <a href="tutoring.html" class="nav-link">UMSI Tutoring</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <div class="title-wrapper">
+            <h1>MSI Academic Advising Resource Site</h1>
+        </div>
+
+    </header>
+    <main id="main">
+        <section>
+            <h2>Content Areas</h2>
+            <ul>
+                <li>Fall 2024 Important Dates</li>
+                <li>Academic Advising</li>
+                <li>Degree Requirements</li>
+            </ul>
+            <figure>
+                <img src="images/student-convocation.jpg" alt="Student Convocation">
+                <figcaption>Student Convocation</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/msi-degree-requirements?authuser=1">Degree
+                        Requirements</a></li>
+                <li><a
+                        href="https://sites.google.com/umich.edu/msiacademicadvising/academic-advising/connecting-with-an-advisor?authuser=1">Connecting
+                        with Advisor</a></li>
+                <li><a
+                        href="https://sites.google.com/umich.edu/msiacademicadvising/degree-progress-registration/monitoring-degree-progress?authuser=1">Monitoring
+                        Progress</a></li>
+            </ul>
+            <figure>
+                <img src="images/artwork.jpg" alt="Artwork">
+                <figcaption>Artwork</figcaption>
+            </figure>
+
+        </section>
+
+        <!-- Jackie Wolf -->
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <footer>
+        <form action="https://formspree.io/f/xrbgkgvd" method="POST" class="form"> Contact Us
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="John" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Doe" required>
+
+            <label for="unique-name">Unique Name:</label>
+            <input type="text" name="unique-name" id="unique-name" placeholder="johndoe" required>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" name="phone-number" pattern="[1]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone-number"
+                placeholder="1-123-456-7890" required>
+
+            <label for="school">School: </label>
+            <select id="school" name="school">
+                <option value="LSA">LSA</option>
+                <option value="SI">SI</option>
+                <option value="Engineering">Engineering</option>
+                <option value="STAMPS">STAMPS</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+        <p>MSI Academic Advising | <a
+                href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic
+                Advising </a></p>
+                <p>© Copyrights <span id="year"></span> by University of Michigan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+
+        document.querySelectorAll("nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active")
+            navMenu.classList.remove("active")
+        }))
+    </script>
+
+</body>
+
+</html>
