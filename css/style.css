@@ -280,6 +280,7 @@ input, option, select{
 
 footer>p>a {
   color: #ffdc52;
+  text-decoration: underline;
 }
 
 .error-section{
